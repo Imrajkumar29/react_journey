@@ -14,7 +14,7 @@ function App() {
         pic="https://i.dailymail.co.uk/i/pix/2013/08/29/article-2405475-1B8389EE000005DC-718_634x550.jpg"
       />
       <Welcome
-        name="karthik"
+        name="Thanvi"
         pic="https://pbs.twimg.com/media/D8dDZukXUAAXLdY.jpg"
       />
     </div>
