@@ -1,5 +1,6 @@
 
 import './App.css';
+import {useState} from "react";
 
 function App() {
   const names=["raghu","satya","radhika"];
@@ -38,6 +39,7 @@ function App() {
     {names.map((nm)=>(
     <User username ={nm}/>
     ))}
+    
     </div>
   );
 }
@@ -60,6 +62,30 @@ function Welcome({ name, pic }) {
     <h1>
       Hi, {name} -😁😁200 followers
     </h1>
+    <Counter/>
   </div>)
+}
+
+//hooks
+function Counter(){
+  //const[t1,t2]=dbl(10);
+ 
+  let [like,setlike] =useState(0);
+  let [dislike,setdislike] =useState(0);
+  const likeStyle= {
+    color :like >=10?"green":"black",
+    //fontWeight:"bold",
+  } ;
+  const dislikeStyle= {
+    color :dislike >=10?"red":"black",
+    //fontWeight:"bold",
+  } ;
+  return(
+<div>
+  {/* onClick ->camelCase */}
+  <button style ={likeStyle} onClick={()=>setlike(like+1)}>like👍 {like}</button>
+  <button style ={dislikeStyle} onClick={()=>setdislike(dislike+1)}>dislike😏 {dislike}</button>
+</div>
+  );
 }
 export default App;
