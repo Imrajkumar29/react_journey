@@ -2,6 +2,49 @@
 import './App.css';
 import {useState} from "react";
 
+// user pics display and like using hooks
+// function App() {
+//   const names=["raghu","satya","radhika"];
+//   const users= [
+//     {
+//       name:"ravi",
+//       pic:"https://static.generated.photos/vue-static/home/feed/latino-male.png",
+//     },
+//     {
+//       name:"Karthik",
+//       pic:"https://i.dailymail.co.uk/i/pix/2013/08/29/article-2405475-1B8389EE000005DC-718_634x550.jpg",
+//     },
+//     {
+//       name:"Thanvi",
+//       pic:"https://pbs.twimg.com/media/D8dDZukXUAAXLdY.jpg",
+//     }
+//   ];
+
+//   return (
+//     <div className="App">
+//       {/* <Welcome     name="Thanvi"
+//         pic="https://pbs.twimg.com/media/D8dDZukXUAAXLdY.jpg"
+//         name="ravi"
+//         pic="https://static.generated.photos/vue-static/home/feed/latino-male.png"
+//       />
+//       <Welcome
+//         name="Karthik"
+//         pic="https://i.dailymail.co.uk/i/pix/2013/08/29/article-2405475-1B8389EE000005DC-718_634x550.jpg"
+//       />
+//       <Welcome
+   
+//       /> */}
+//      {users.map((usr)=>(
+//     <Welcome name ={usr.name} pic ={usr.pic}/>
+//     ))}
+//     {names.map((nm)=>(
+//     <User username ={nm}/>
+//     ))}
+    
+//     </div>
+//   );
+// }
+
 function App() {
   const names=["raghu","satya","radhika"];
   const users= [
@@ -21,18 +64,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Welcome     name="Thanvi"
-        pic="https://pbs.twimg.com/media/D8dDZukXUAAXLdY.jpg"
-        name="ravi"
-        pic="https://static.generated.photos/vue-static/home/feed/latino-male.png"
-      />
-      <Welcome
-        name="Karthik"
-        pic="https://i.dailymail.co.uk/i/pix/2013/08/29/article-2405475-1B8389EE000005DC-718_634x550.jpg"
-      />
-      <Welcome
-   
-      /> */}
      {users.map((usr)=>(
     <Welcome name ={usr.name} pic ={usr.pic}/>
     ))}
@@ -43,6 +74,9 @@ function App() {
     </div>
   );
 }
+
+
+// function movie
 
 function User({username}){
   return(
@@ -80,9 +114,14 @@ function Counter(){
     color :dislike >=10?"red":"black",
     //fontWeight:"bold",
   } ;
+  const messageStyle ={
+    display :like-dislike>=10 ?"block":"none",
+  };
   return(
 <div>
   {/* onClick ->camelCase */}
+  {/* {like -dislike >=10 ?<h2> you are awesome🎸</h2>:null} */}
+  <h2 style={messageStyle}> you are awesome🎸</h2>
   <button style ={likeStyle} onClick={()=>setlike(like+1)}>like👍 {like}</button>
   <button style ={dislikeStyle} onClick={()=>setdislike(dislike+1)}>dislike😏 {dislike}</button>
 </div>
