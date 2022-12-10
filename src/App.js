@@ -120,8 +120,10 @@ function Counter(){
   return(
 <div>
   {/* onClick ->camelCase */}
-  {/* {like -dislike >=10 ?<h2> you are awesome🎸</h2>:null} */}
-  <h2 style={messageStyle}> you are awesome🎸</h2>
+  {/* conditional rendering -> this is preferred over conditional styling as this doesn't occupy dom*/}
+  {like -dislike >=10 ?<h2> you are awesome🎸</h2>:null}
+  {/* conditional styling */}
+  {/* <h2 style={messageStyle}> you are awesome🎸</h2> */}
   <button style ={likeStyle} onClick={()=>setlike(like+1)}>like👍 {like}</button>
   <button style ={dislikeStyle} onClick={()=>setdislike(dislike+1)}>dislike😏 {dislike}</button>
 </div>

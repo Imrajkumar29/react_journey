@@ -44,3 +44,13 @@
    7. Flow: User clicks -> `onClick` trigger -> `setLike` -> React updates view
 
    https://www.figma.com/file/chnP704JBLLU2OAwBXdMhG/React-movie-design?node-id=0%3A1
+   
+   
+   ### Material installation
+
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+put the below links in index.html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
