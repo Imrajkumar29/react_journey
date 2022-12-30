@@ -44,13 +44,33 @@
    7. Flow: User clicks -> `onClick` trigger -> `setLike` -> React updates view
 
    https://www.figma.com/file/chnP704JBLLU2OAwBXdMhG/React-movie-design?node-id=0%3A1
-   
-   
+
+### imports & exports
+
+1. Types
+   1. named - imports & exports - preferred
+      1. Multiple exports
+   2. default - imports & exports
+      1. Only export per file
+2. Always put export at end of the file - good practice
+
+### Virtual DOM
+
+1. Copy of the Real Dom
+2. Large `{key: value}`
+3. Updating it does not cost performance
+4. To access VDOM you could use hooks (setState)
+5. Once the update is done on the virtual DOM, then the Real dom is update
+6. Comparison - Reconciliation - VDOM & Real Dom
+7. Key helps is quickly compare the changes
+8. `document.*` in React - Looses performance
+
    ### Material installation
 
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material
 put the below links in index.html
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
