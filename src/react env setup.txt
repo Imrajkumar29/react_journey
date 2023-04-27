@@ -1,0 +1,9 @@
+
+node -v 
+
+git config --global user.name "Imrajkumar29"
+
+git config --global user.email "rajkumar291994@gmail.com"
+
+go to directory and use ->npx create-react-app react_journey
+
